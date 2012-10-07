@@ -3,7 +3,7 @@
   "repo": "component/raf",
   "description": "request animation frame",
   "version": "0.0.1",
-  "keywords": [],
+  "keywords": ["animate", "requestAnimationFrame", "performance"],
   "dependencies": {},
   "development": {},
   "scripts": [
