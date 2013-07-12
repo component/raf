@@ -1,10 +1,18 @@
 
-module.exports = window.requestAnimationFrame
+/**
+ * Expose `requestAnimationFrame()`.
+ */
+
+exports = module.exports = window.requestAnimationFrame
   || window.webkitRequestAnimationFrame
   || window.mozRequestAnimationFrame
   || window.oRequestAnimationFrame
   || window.msRequestAnimationFrame
   || fallback;
+
+/**
+ * Fallback implementation.
+ */
 
 var prev = new Date().getTime();
 function fallback(fn) {
@@ -13,3 +21,13 @@ function fallback(fn) {
   setTimeout(fn, ms);
   prev = curr;
 }
+
+/**
+ * Cancel.
+ */
+
+exports.cancel = window.cancelAnimationFrame
+  || window.webkitCancelAnimationFrame
+  || window.mozCancelAnimationFrame
+  || window.oCancelAnimationFrame
+  || window.msCancelAnimationFrame;

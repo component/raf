@@ -9,6 +9,8 @@
 
 ## Example
 
+  Request the animation frame with `raf(fn)`, cancel with `raf.cancel(id)`.
+
 ```js
 var x = 0;
 var y = 50;
