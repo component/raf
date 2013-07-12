@@ -26,8 +26,12 @@ function fallback(fn) {
  * Cancel.
  */
 
-exports.cancel = window.cancelAnimationFrame
+var cancel = window.cancelAnimationFrame
   || window.webkitCancelAnimationFrame
   || window.mozCancelAnimationFrame
   || window.oCancelAnimationFrame
   || window.msCancelAnimationFrame;
+
+exports.cancel = function(id){
+  cancel.call(window, id);
+};
