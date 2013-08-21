@@ -2,12 +2,20 @@
   "name": "raf-component",
   "description": "request animation frame",
   "version": "1.1.1",
-  "keywords": ["animate", "requestAnimationFrame", "performance"],
+  "keywords": [
+    "animate",
+    "requestAnimationFrame",
+    "performance"
+  ],
   "dependencies": {},
   "development": {},
   "component": {
     "scripts": {
       "raf/index.js": "index.js"
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/component/raf.git"
   }
 }
