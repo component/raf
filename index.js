@@ -1,4 +1,3 @@
-
 /**
  * Expose `requestAnimationFrame()`.
  */
@@ -18,8 +17,9 @@ var prev = new Date().getTime();
 function fallback(fn) {
   var curr = new Date().getTime();
   var ms = Math.max(0, 16 - (curr - prev));
-  setTimeout(fn, ms);
+  var req = setTimeout(fn, ms);
   prev = curr;
+  return req;
 }
 
 /**
@@ -30,7 +30,8 @@ var cancel = window.cancelAnimationFrame
   || window.webkitCancelAnimationFrame
   || window.mozCancelAnimationFrame
   || window.oCancelAnimationFrame
-  || window.msCancelAnimationFrame;
+  || window.msCancelAnimationFrame
+  || window.clearTimeout;
 
 exports.cancel = function(id){
   cancel.call(window, id);
