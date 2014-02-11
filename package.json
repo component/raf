@@ -8,12 +8,12 @@
     "performance"
   ],
   "dependencies": {},
-  "development": {},
   "component": {
     "scripts": {
       "raf/index.js": "index.js"
     }
   },
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/component/raf.git"
