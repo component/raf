@@ -1,3 +1,10 @@
+
+1.1.3 / 2014-02-11
+==================
+
+  * package: rename to "component-raf"
+  * package: add "main" field
+
 1.1.2 / 2013-07-12
 ==================
 
