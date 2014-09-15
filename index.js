@@ -5,8 +5,6 @@
 exports = module.exports = window.requestAnimationFrame
   || window.webkitRequestAnimationFrame
   || window.mozRequestAnimationFrame
-  || window.oRequestAnimationFrame
-  || window.msRequestAnimationFrame
   || fallback;
 
 /**
@@ -29,8 +27,6 @@ function fallback(fn) {
 var cancel = window.cancelAnimationFrame
   || window.webkitCancelAnimationFrame
   || window.mozCancelAnimationFrame
-  || window.oCancelAnimationFrame
-  || window.msCancelAnimationFrame
   || window.clearTimeout;
 
 exports.cancel = function(id){
