@@ -1,4 +1,9 @@
 
+1.2.0 / 2014-09-14
+==================
+
+  * remove never implemented -o and -ms prefixes (@darsain)
+  
 1.1.3 / 2014-02-11
 ==================
 
