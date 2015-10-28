@@ -2,7 +2,7 @@
  * Expose `requestAnimationFrame()`.
  */
 
-exports = module.exports = window.requestAnimationFrame
+exports = module.exports = (window.requestAnimationFrame && window.requestAnimationFrame.bind(window))
   || window.webkitRequestAnimationFrame
   || window.mozRequestAnimationFrame
   || fallback;
@@ -24,7 +24,7 @@ function fallback(fn) {
  * Cancel.
  */
 
-var cancel = window.cancelAnimationFrame
+var cancel = (window.cancelAnimationFrame && window.cancelAnimationFrame.bind(window))
   || window.webkitCancelAnimationFrame
   || window.mozCancelAnimationFrame
   || window.clearTimeout;
