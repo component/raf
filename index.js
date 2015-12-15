@@ -2,10 +2,10 @@
  * Expose `requestAnimationFrame()`.
  */
 
-exports = module.exports = window.requestAnimationFrame
+exports = module.exports = (window.requestAnimationFrame
   || window.webkitRequestAnimationFrame
   || window.mozRequestAnimationFrame
-  || fallback;
+  || fallback).bind(window);
 
 /**
  * Fallback implementation.
