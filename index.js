@@ -16,7 +16,7 @@ function fallback(fn) {
   var curr = new Date().getTime();
   var ms = Math.max(0, 16 - (curr - prev));
   var req = setTimeout(fn, ms);
-  prev = curr;
+  prev = curr + ms;
   return req;
 }
 
